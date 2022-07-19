@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import puppeteer from 'puppeteer'
 import { promises as fs } from 'fs'
 
