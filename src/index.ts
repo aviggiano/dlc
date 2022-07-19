@@ -51,7 +51,9 @@ export async function download(url: string, dir: string): Promise<void> {
     const filename = filenames[i]
     i += 1
     if (filename) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       await button.evaluate((b) => (b as any).click())
+      // eslint-disable-next-line no-loop-func
       const code = await page.evaluate(() => navigator.clipboard.readText())
 
       console.log(`Saving file ${filename}`)

@@ -1,5 +1,6 @@
 {
   "name": "dlc",
+  "description": "Download verified smart contracts from Etherscan",
   "license": "MIT",
   "version": "0.0.1",
   "main": "dist/index.js",
@@ -12,6 +13,7 @@
     "build": "",
     "clean": "rm -rf dist/",
     "prettier": "prettier --write src",
+    "prepublish": "tsc",
     "lint": "eslint 'src/**/*.ts' --max-warnings=0 -c .eslintrc.js"
   },
   "devDependencies": {
