@@ -3,7 +3,7 @@ import puppeteer from 'puppeteer'
 import { promises as fs } from 'fs'
 
 const URL = process.argv[2]
-const DIR = process.argv[3] || 'contracts/'
+const DIR = process.argv[3] || 'contracts'
 
 if (!URL) throw new Error('Usage: npx dlc <ETHERSCAN_URL> [contracts/]')
 
@@ -58,7 +58,10 @@ export async function download(url: string, dir: string): Promise<void> {
       const code = await page.evaluate(() => navigator.clipboard.readText())
 
       console.log(`Saving file ${filename}`)
-      await fs.writeFile(`${dir}${filename}`, code)
+      await fs.writeFile(
+        `${dir.endsWith('/') ? dir : `${dir}/`}${filename}`,
+        code
+      )
     }
   }
 

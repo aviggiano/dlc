@@ -1,9 +1,9 @@
 {
   "name": "dlcontract",
   "description": "Download verified smart contracts from Etherscan",
-  "keywords": ["smart contracts", "etherscan", "solidity", "download"],
+  "keywords": ["smart contracts", "smart", "contracts", "etherscan", "solidity", "download", "ethereum"],
   "license": "MIT",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "https://github.com/aviggiano/dlc",
