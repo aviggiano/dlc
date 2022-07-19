@@ -4,6 +4,8 @@ import { promises as fs } from 'fs'
 const URL = process.argv[2]
 const DIR = process.argv[3] || 'contracts/'
 
+if (!URL) throw new Error('Usage: npx dlc <ETHERSCAN_URL> [contracts/]')
+
 const COPY_TO_CLIPBOARD_BUTTONS = '.js-clipboard.mr-1'
 const FILENAME_SPANS =
   'div.d-flex.justify-content-between > span.text-secondary'
