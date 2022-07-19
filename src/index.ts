@@ -46,6 +46,7 @@ export async function download(url: string, path: string): Promise<void> {
   console.log(`Found ${filenames.length} files`)
 
   const dir = path.endsWith('/') ? path : `${path}/`
+  console.log(`Create directory ${dir}`)
   await fs.mkdir(dir, { recursive: true })
 
   let i = 0
