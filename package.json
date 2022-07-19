@@ -1,0 +1,33 @@
+{
+  "name": "dlc",
+  "license": "MIT",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/aviggiano/dlc",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "",
+    "clean": "rm -rf dist/",
+    "prettier": "prettier --write src",
+    "lint": "eslint 'src/**/*.ts' --max-warnings=0 -c .eslintrc.js"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "prettier": "^2.2.1",
+    "@typescript-eslint/parser": "^4.18.0",
+    "csv-parse": "^4.16.0",
+    "prettier-eslint": "^12.0.0",
+    "typescript": "^4.7.4"
+  }
+}
