@@ -10,7 +10,6 @@
     "dist"
   ],
   "scripts": {
-    "build": "",
     "clean": "rm -rf dist/",
     "prettier": "prettier --write src",
     "prepublish": "tsc",
