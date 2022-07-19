@@ -3,10 +3,10 @@
   "description": "Download verified smart contracts from Etherscan",
   "keywords": ["smart contracts", "smart", "contracts", "etherscan", "solidity", "download", "ethereum"],
   "license": "MIT",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": "https://github.com/aviggiano/dlc",
+  "repository": "https://github.com/aviggiano/dlcontract",
   "bin": {
     "dlcontract": "dist/index.js"
   },
