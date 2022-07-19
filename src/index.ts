@@ -11,8 +11,8 @@ const COPY_TO_CLIPBOARD_BUTTONS = '.js-clipboard.mr-1'
 const FILENAME_SPANS =
   'div.d-flex.justify-content-between > span.text-secondary'
 
-export async function download(url: string, dir: string): Promise<void> {
-  console.log(`download '${url}' and save to '${dir}'`)
+export async function download(url: string, path: string): Promise<void> {
+  console.log(`download '${url}' and save to '${path}'`)
   const browser = await puppeteer.launch()
   const context = browser.defaultBrowserContext()
   context.overridePermissions(url, ['clipboard-read'])
@@ -45,6 +45,7 @@ export async function download(url: string, dir: string): Promise<void> {
 
   console.log(`Found ${filenames.length} files`)
 
+  const dir = path.endsWith('/') ? path : `${path}/`
   await fs.mkdir(dir, { recursive: true })
 
   let i = 0
@@ -58,10 +59,7 @@ export async function download(url: string, dir: string): Promise<void> {
       const code = await page.evaluate(() => navigator.clipboard.readText())
 
       console.log(`Saving file ${filename}`)
-      await fs.writeFile(
-        `${dir.endsWith('/') ? dir : `${dir}/`}${filename}`,
-        code
-      )
+      await fs.writeFile(`${dir}${filename}`, code)
     }
   }
 
