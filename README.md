@@ -1,5 +1,9 @@
 # dlcontract
 
+⚠️ ARCHIVED: please use https://www.npmjs.com/package/ethereum-sources-downloader instead
+
+### Docs
+
 Download verified smart contracts from Etherscan
 
 ```
